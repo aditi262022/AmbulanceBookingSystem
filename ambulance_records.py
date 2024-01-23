@@ -48,7 +48,7 @@ class AmbulanceModel:
                     file.write(line)
         if not found:
             print(f"No booking found with ID {booking_id_to_cancel}.")
-class AmbulanceModel:
+
     @staticmethod
     def generate_booking_id():
         if not os.path.exists(DATA_FILE):
@@ -93,3 +93,18 @@ class AmbulanceModel:
                     file.write(line)
         if not found:
             print(f"No booking found with ID {booking_id_to_cancel}.")
+            
+    @staticmethod
+    def add_emergency_contact(name, contact):
+        AmbulanceModel.add_emergency_contact
+
+    @staticmethod
+    def view_emergency_instructions():
+        return [
+            "1. Stay calm and assess the situation.",
+            "2. Dial emergency services (e.g., 108) immediately.",
+            "3. Administer first aid if trained to do so.",
+            "4. Provide accurate information about the emergency when calling for help.",
+            "5. Stay with the injured person until help arrives.",
+            "6. Do not move injured persons unless it is absolutely necessary for their safety.",
+        ]
