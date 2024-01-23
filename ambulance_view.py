@@ -1,13 +1,13 @@
 class AmbulanceView:
     @staticmethod
     def display_menu():
-        print("\nAmbulance Booking System")
+        print("\nAmbulance Booking System Menu:")
         print("1. Book an Ambulance")
-        print("2. View Booking Records")
-        print("3. Search Booking Records")
+        print("2. View Records")
+        print("3. Search Records")
         print("4. Cancel Booking")
-        print("5. Emergency Contacts")
-        print("6. Emergency Instructions")
+        print("5. Save Emergency Contact")
+        print("6. View Emergency Instructions")
         print("7. Exit")
 
     @staticmethod
@@ -28,6 +28,13 @@ class AmbulanceView:
                 print(record)
         else:
             print("No matching records found.")
+
+    @staticmethod
+    def display_emergency_instructions(emergency_instructions):
+        print("\nEmergency Instructions:")
+        for instruction in emergency_instructions:
+            print(instruction)
+
 
     @staticmethod
     def get_input(message):
