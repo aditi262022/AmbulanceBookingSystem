@@ -27,6 +27,20 @@ class AmbulanceController:
     def cancel_booking():
         booking_id_to_cancel = AmbulanceView.get_input("Enter the ID of the booking to cancel: ")
         AmbulanceModel.cancel_booking(booking_id_to_cancel)
+        
+    @staticmethod
+    def add_emergency_contact():
+        print("\nAdd Emergency Contact")
+        name = AmbulanceView.get_input("Enter the emergency contact's name: ")
+        contact = AmbulanceView.get_input("Enter the emergency contact's contact number: ")
+        AmbulanceModel.add_emergency_contact(name, contact)
+        print("Emergency contact added successfully.")
+   
+    @staticmethod
+    def view_emergency_instructions():
+        emergency_instructions = AmbulanceModel.view_emergency_instructions()
+        AmbulanceView.display_emergency_instructions(emergency_instructions)
+
 
 # Main program's loop
 while True:
@@ -42,11 +56,9 @@ while True:
     elif choice == "4":
         AmbulanceController.cancel_booking()
     elif choice == "5":
-        # Emergency Contacts functionality goes here
-        pass
+        AmbulanceController.add_emergency_contact()
     elif choice == "6":
-        # Emergency Instructions functionality goes here
-        pass
+        AmbulanceController.view_emergency_instructions()
     elif choice == "7":
         print("Exiting the program. Thank you!")
         break
